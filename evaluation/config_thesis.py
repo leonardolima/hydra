@@ -20,19 +20,22 @@ tools = {
     "vydra": {
         "exec": "/home/hydra/vydra", "fmla": ".mdl", "fmla_flag": "", "log": ".log", "log_flag": "", "pre_flags": "", "flags": "", "script": False
     },
+    "explanator2": {
+        "exec": "/home/hydra/explanator2/bin/explanator2.exe", "fmla": ".mdl", "fmla_flag": "", "log": ".log", "log_flag": "", "pre_flags": "", "flags": "-O size", "script": False
+    },
 }
 
 formats = ["hydra", "reelay"]
 
 exps = {
-    "exp_scaling_pmtl": {"typ": "gen_scaling", "range": range(2, 21, 2), "fmlas": 5, "size": 25, "max_int": 1000, "type": "40", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay"],
+    "exp_scaling_pmtl": {"typ": "gen_scaling", "range": range(2, 21, 2), "fmlas": 5, "size": 25, "max_int": 1000, "type": "40", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay", "explanator2"],
     "log": {
         "len": 100000,
         "er": 1,
         "delta": 1,
         "aps": 16,
     }},
-    "exp_scaling_mtl": {"typ": "gen_scaling", "range": range(2, 21, 2), "fmlas": 5, "size": 25, "max_int": 1000, "type": "0", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon"],
+    "exp_scaling_mtl": {"typ": "gen_scaling", "range": range(2, 21, 2), "fmlas": 5, "size": 25, "max_int": 1000, "type": "0", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "explanator2"],
     "log": {
         "len": 2000,
         "er": 2,
@@ -46,15 +49,15 @@ exps = {
         "delta": 100,
         "aps": 16,
     }},
-    "exp_mtl_fixed": {"typ": "gen_exp", "gen": "gen_mtl_fixed 1", "range": range(1000, 11000, 1000), "fmlas": 1, "len": 100000, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay"]},
-    "exp_size_pmtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "40", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay"],
+    "exp_mtl_fixed": {"typ": "gen_exp", "gen": "gen_mtl_fixed 1", "range": range(1000, 11000, 1000), "fmlas": 1, "len": 100000, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay", "explanator2"]},
+    "exp_size_pmtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "40", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay", "explanator2"],
     "log": {
         "len": 100000,
         "er": 1,
         "delta": 1,
         "aps": 16,
     }},
-    "exp_size_mtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "0", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon"],
+    "exp_size_mtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "0", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "explanator2"],
     "log": {
         "len": 100000,
         "er": 10,
@@ -68,7 +71,7 @@ exps = {
         "delta": 4,
         "aps": 16,
     }},
-    "exp_mtl_exp": {"typ": "gen_exp", "gen": "gen_mtl_exp", "range": range(1, 12), "fmlas": 1, "len": 10000, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon"]},
+    "exp_mtl_exp": {"typ": "gen_exp", "gen": "gen_mtl_exp", "range": range(1, 12), "fmlas": 1, "len": 10000, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "explanator2"]},
     "exp_mdl_bw_quad": {"typ": "gen_exp", "gen": "gen_mdl_quad bw", "range": range(4, 42, 4), "fmlas": 1, "len": 10000, "tools": ["hydra", "vydra", "aerial", "verimon"]},
     "exp_mdl_fw_quad": {"typ": "gen_exp", "gen": "gen_mdl_quad fw", "range": range(4, 42, 4), "fmlas": 1, "len": 10000, "tools": ["hydra", "vydra", "aerial", "verimon"]},
 }
@@ -102,6 +105,7 @@ plot_config_tools = {
     "reelay": {"name": "REELAY", "pointtype": 6, "color": "\"0xAA00AA\""},
     "hydra": {"name": "HYDRA", "pointtype": 6, "color": "\"0xFF0000\""},
     "vydra": {"name": "VYDRA", "pointtype": 4, "color": "\"0x000000\""},
+    "explanator2": {"name": "EXPLANATOR2", "pointtype": 6, "color": "\"0x00FFFF\""},
 }
 
 plot_config_types = {

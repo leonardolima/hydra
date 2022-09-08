@@ -12,10 +12,14 @@ RUN pip3 install antlr4-python3-runtime ply pyyaml setuptools wheel
 
 USER hydra
 RUN opam init -y --disable-sandboxing
-RUN opam install -y ocamlbuild ocamlfind ctypes dune dune-build-info safa menhir qcheck zarith
+RUN opam install -y ocamlbuild ocamlfind ctypes dune dune-build-info safa menhir qcheck zarith core_kernel base js_of_ocaml js_of_ocaml-ppx js_of_ocaml-lwt zarith_stubs_js
 
 ENV WDIR /home/hydra
 WORKDIR ${WDIR}
+
+# Explanator2
+RUN git clone https://github.com/runtime-monitoring/explanator2.git
+RUN eval `opam config env`; cd explanator2; dune build
 
 # Aerial
 RUN git clone https://bitbucket.org/traytel/aerial.git

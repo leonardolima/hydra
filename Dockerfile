@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y bc bison ca-certificates clang flex git gnuplot libboost-dev libgmp3-dev libssl-dev locales make m4 opam python3 python3-pip vim
+RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y bc bison ca-certificates clang flex git gnuplot libboost-dev libgmp3-dev libssl-dev locales make m4 opam python3 python3-pip nano
 
 RUN adduser --disabled-password --gecos "" hydra
 RUN locale-gen en_US.UTF-8 &&\

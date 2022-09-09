@@ -21,7 +21,7 @@ tools = {
         "exec": "/home/hydra/vydra", "fmla": ".mdl", "fmla_flag": "", "log": ".log", "log_flag": "", "pre_flags": "", "flags": "", "script": False
     },
     "explanator2": {
-        "exec": "/home/hydra/explanator2/bin/explanator2.exe", "fmla": ".mdl", "fmla_flag": "", "log": ".log", "log_flag": "", "pre_flags": "", "flags": "-O size", "script": False
+        "exec": "/home/hydra/explanator2/bin/explanator2.exe", "fmla": ".mdl", "fmla_flag": "-fmla", "log": ".log", "log_flag": "-log", "pre_flags": "", "flags": "-O size", "script": False
     },
 }
 

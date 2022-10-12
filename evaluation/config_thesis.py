@@ -105,7 +105,7 @@ plot_config_tools = {
     "reelay": {"name": "REELAY", "pointtype": 6, "color": "\"0xAA00AA\""},
     "hydra": {"name": "HYDRA", "pointtype": 6, "color": "\"0xFF0000\""},
     "vydra": {"name": "VYDRA", "pointtype": 4, "color": "\"0x000000\""},
-    "explanator2": {"name": "EXPLANATOR2", "pointtype": 6, "color": "\"0x#FFA500\""},
+    "explanator2": {"name": "EXPLANATOR2", "pointtype": 6, "color": "\"0xFFA500\""},
 }
 
 plot_config_types = {

@@ -50,14 +50,14 @@ exps = {
     #     "aps": 16,
     # }},
     # "exp_mtl_fixed": {"typ": "gen_exp", "gen": "gen_mtl_fixed 1", "range": range(1000, 11000, 1000), "fmlas": 1, "len": 100000, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay", "explanator2"]},
-    "exp_size_pmtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "40", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "reelay", "explanator2"],
+    "exp_size_pmtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "40", "aps": 16, "tools": ["explanator2", "aerial_mtl", "verimon", "monpoly", "hydra", "vydra"],
     "log": {
         "len": 100000,
         "er": 1,
         "delta": 1,
         "aps": 16,
     }},
-    "exp_size_mtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "0", "aps": 16, "tools": ["hydra", "vydra", "aerial_mtl", "monpoly", "verimon", "explanator2"],
+    "exp_size_mtl": {"typ": "gen_size", "range": range(6, 52, 11), "fmlas": 5, "max_int": 50, "type": "0", "aps": 16, "tools": ["explanator2", "aerial_mtl", "verimon", "monpoly", "hydra", "vydra"],
     "log": {
         "len": 100000,
         "er": 10,
@@ -99,13 +99,12 @@ plot_config_misc = {
 
 plot_config_tools = {
     # "aerial": {"name": "AERIAL", "pointtype": 6, "color": "\"0x00AA00\""},
-    "aerial_mtl": {"name": "AERIAL", "pointtype": 6, "color": "\"0x00AA00\""},
-    "monpoly": {"name": "MONPOLY", "pointtype": 6, "color": "\"0x0000FF\""},
-    "verimon": {"name": "VERIMON", "pointtype": 4, "color": "\"0x0000FF\""},
-    "reelay": {"name": "REELAY", "pointtype": 6, "color": "\"0xAA00AA\""},
-    "hydra": {"name": "HYDRA", "pointtype": 6, "color": "\"0xFF0000\""},
-    "vydra": {"name": "VYDRA", "pointtype": 4, "color": "\"0x000000\""},
-    "explanator2": {"name": "EXPLANATOR2", "pointtype": 6, "color": "\"0xFFA500\""},
+    "explanator2": {"name": "EXPLANATOR2", "pointtype": 12, "color": "\"0xFF0000\""},
+    "aerial_mtl": {"name": "AERIAL", "pointtype": 2, "color": "\"0x00AA00\""},
+    "verimon": {"name": "VERIMON", "pointtype": 6, "color": "\"0x0000FF\""},
+    "monpoly": {"name": "MONPOLY", "pointtype": 4, "color": "\"0x0000FF\""},
+    "hydra": {"name": "HYDRA", "pointtype": 8, "color": "\"0x000000\""},
+    "vydra": {"name": "VYDRA", "pointtype": 10, "color": "\"0x000000\""},
 }
 
 plot_config_types = {
